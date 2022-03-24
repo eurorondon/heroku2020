@@ -35,8 +35,8 @@ app.get('/', function(req,res){
     res.send('Ruta INICIO');
 });
 //Mostrar todos los artículos
-app.get('/api/users', (req,res)=>{
-    conexion.query('SELECT * FROM senales', (error,filas)=>{
+app.get('/api/users/binance_killers', (req,res)=>{
+    conexion.query('SELECT * FROM senales_binance_killers', (error,filas)=>{
         if(error){
             throw error;
         }else{
@@ -45,6 +45,55 @@ app.get('/api/users', (req,res)=>{
     })
 });
 
+app.get('/api/users/always_win', (req,res)=>{
+    conexion.query('SELECT * FROM senales_always_win', (error,filas)=>{
+        if(error){
+            throw error;
+        }else{
+            res.send(filas);
+        }
+    })
+});
+
+app.get('/api/users/bitcoinbullet', (req,res)=>{
+    conexion.query('SELECT * FROM senales_bitcoinbullet', (error,filas)=>{
+        if(error){
+            throw error;
+        }else{
+            res.send(filas);
+        }
+    })
+});
+
+app.get('/api/users/latino_semanal', (req,res)=>{
+    conexion.query('SELECT * FROM senales_latino_semanal', (error,filas)=>{
+        if(error){
+            throw error;
+        }else{
+            res.send(filas);
+        }
+    })
+});
+
+app.get('/api/users/latino_diario', (req,res)=>{
+    conexion.query('SELECT * FROM senales_latino_diario', (error,filas)=>{
+        if(error){
+            throw error;
+        }else{
+            res.send(filas);
+        }
+    })
+});
+
+app.get('/api/users/latino_4h', (req,res)=>{
+    conexion.query('SELECT * FROM senales_latino_4h', (error,filas)=>{
+        if(error){
+            throw error;
+        }else{
+            res.send(filas);
+        }
+    })
+});
 
 
 
