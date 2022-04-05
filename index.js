@@ -46,7 +46,7 @@ app.get('/api/users/binance_killers', (req,res)=>{
 });
 
 app.get('/api/users/always_win', (req,res)=>{
-    conexion.query('SELECT * FROM senales_always_win', (error,filas)=>{
+    conexion.query('SELECT * FROM senales_russian', (error,filas)=>{
         if(error){
             throw error;
         }else{
